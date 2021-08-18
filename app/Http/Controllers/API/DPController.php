@@ -53,8 +53,9 @@ class DPController extends Controller
 
             return response()->json(Json::response(true, [
                 "original_image" => asset($filePath),
-                "sirv_image" => $sirvImageUrl,
+                "sirv_cropped_image" => $croppedImageUrl,
                 "remove_bg_image" => asset($pathToSave),
+                "profile_picture" => asset($pathToSave),
             ], "Profile Image Processed Successfully"), 200);
         } else {
             return response()->json(Json::response(true, [], "Profile Picture could not be uploaded"), 200);
