@@ -40,9 +40,22 @@ class DPController extends Controller
             $sirvImageUrl = "$sirvBaseUrl/{$sirvPath}";
             $croppedImageUrl = "{$sirvImageUrl}?crop.type=face";
 
-            $removebg->url($croppedImageUrl)->save(public_path(Storage::url("processed_pictures/{$path}")));
+            $pathToSave = Storage::url("processed_pictures/{$path}");
 
-            return response()->json(Json::response(true, [], "Profile Image Uploaded Successfully"), 200);
+            $removebg->url($croppedImageUrl)
+                ->body([
+                    'size' => '4k',
+                    'bg_color' => '#000000',
+                    'add_shadow' => false,
+                    'channels' => 'rgba',
+                ])
+                ->save(public_path($pathToSave));
+
+            return response()->json(Json::response(true, [
+                "original_image" => asset($filePath),
+                "sirv_image" => $sirvImageUrl,
+                "remove_bg_image" => asset($pathToSave),
+            ], "Profile Image Processed Successfully"), 200);
         } else {
             return response()->json(Json::response(true, [], "Profile Picture could not be uploaded"), 200);
         }
