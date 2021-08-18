@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cadd819a6415b190ae2704ced6e6c8b",
+    "content-hash": "3b38cb45ec3cf8e272a7c5e82e7e95c0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1620,6 +1620,71 @@
                 }
             ],
             "time": "2021-07-23T07:42:52+00:00"
+        },
+        {
+            "name": "mtownsend/remove-bg",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtownsend5512/remove-bg.git",
+                "reference": "c90d2c512b590563ab48c5fdb941a3b849aabda4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtownsend5512/remove-bg/zipball/c90d2c512b590563ab48c5fdb941a3b849aabda4",
+                "reference": "c90d2c512b590563ab48c5fdb941a3b849aabda4",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "php": "~7.0|~8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mtownsend\\RemoveBg\\Providers\\RemoveBgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mtownsend\\RemoveBg\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Townsend",
+                    "email": "mtownsend5512@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP package to interface with the remove.bg api.",
+            "keywords": [
+                "api",
+                "background",
+                "bg",
+                "image",
+                "photo",
+                "php",
+                "remove",
+                "transparent"
+            ],
+            "support": {
+                "issues": "https://github.com/mtownsend5512/remove-bg/issues",
+                "source": "https://github.com/mtownsend5512/remove-bg/tree/2.0.0"
+            },
+            "time": "2021-04-05T15:49:19+00:00"
         },
         {
             "name": "nesbot/carbon",

@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return [
+        'app' => 'BoardRoomOne API',
+        'version' => '1.0.0',
+    ];
 });
+
+Route::post('dp-creator', 'API/DPController@index');
