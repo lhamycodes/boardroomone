@@ -21,3 +21,10 @@ Send a `POST` request to this [endpoint](https://boardroomone.lhamy.codes/api/dp
 ```
 
 The `data.original_image` property is the image uploaded by client, the `data.sirv_cropped_image` is the image returned from SIRV, the `data.remove_bg_image` is the image returned after background removal and the `data.profile_picture` is the final processed profile picture
+
+## Setup
+1. Clone project, cd to project directory
+2. Run composer install and copy content from `.env.example` file to `.env`
+3. Replace the following environment variable values in your .env file `SIRV_CLIENT_ID`, `SIRV_CLIENT_SECRET`, `REMOVEBG_API_KEY`
+4. Run `php artisan serve` and copy the url generated (e.g http://127.0.0.1:8000)
+5. Call the `DP Creator` endpoint via Postman or any REST Client (Web, Mobile) by visisiting `base_url/api/dp-creator`
