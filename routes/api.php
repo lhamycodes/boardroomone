@@ -18,6 +18,7 @@ Route::get('/', function () {
     return [
         'app' => 'BoardRoomOne API',
         'version' => '1.0.0',
+        'documentation' => "https://documenter.getpostman.com/view/4439932/TzzAMbuK",
     ];
 });
 
