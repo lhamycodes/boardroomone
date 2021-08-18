@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Services;
+
 /**
  * Sirv REST API PHP class
  *

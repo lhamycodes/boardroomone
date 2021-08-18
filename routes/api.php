@@ -21,4 +21,4 @@ Route::get('/', function () {
     ];
 });
 
-Route::post('dp-creator', 'API/DPController@index');
+Route::post('dp-creator', 'API\DPController@index');

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use SirvAPIClient;
+use App\Services\SirvAPIClient;
 
 class Sirv
 {
@@ -41,8 +41,8 @@ class Sirv
         }
     }
 
-    public function uploadFile()
+    public function uploadFile($filePath, $sirvUploadPath)
     {
-        $this->sirv->uploadFile("", "");
+        return $this->sirv->uploadFile($filePath, $sirvUploadPath);
     }
 }
